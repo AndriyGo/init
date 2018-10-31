@@ -1,1 +1,2 @@
-Amazon
+#whois $(nslookup slash16.org | grep "Address" | awk '{print $2}' | sed -e 1d) | grep 'OrgName:' | awk '{$1=""; print $0}'
+Amazon Technologies Inc.

@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -n "\r1\r2\r3\r42"

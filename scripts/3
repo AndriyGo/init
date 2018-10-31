@@ -1,0 +1,7 @@
+#!/bin/bash
+FOLDER=$1
+if [ -d $FOLDER ]; then
+ls -lS $FOLDER
+else
+echo "Invalid path"
+fi

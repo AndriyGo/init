@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ -e /etc/md5 ]; then
+	if ! md5sum -c /etc/md5; then
+		echo "MD5 doesn't match!" | mail -s "Black ops needed"
+		md5sum /etc/crontab > /etc/md5
+	fi
+else
+	md5sum /etc/crontab > /etc/md5
+fi
+
+#@midnight script to crontab

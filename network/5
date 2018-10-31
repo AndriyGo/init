@@ -1,1 +1,2 @@
-host -t NS slash16.org | awk '{print $4}' | nslookup | awk '/Name:/ {for(i=1; i<=1; i++) {getline; print $2}}'
+#!/bin/bash
+nslookup slash16.org | grep 'Server' | awk '{print $2}'
